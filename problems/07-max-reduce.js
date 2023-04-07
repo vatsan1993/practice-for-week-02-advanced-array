@@ -15,7 +15,15 @@ console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 */
 
 let maxWithReduce = function(nums) {
-    // Your code here
+  let initialValue = nums[0];
+  let maxVal = nums.reduce((acc, value) => {
+    if(value > acc){
+      return value;
+    }else{
+      return acc;
+    }
+  }, initialValue);
+  return maxVal;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -24,9 +24,16 @@ let arr2 = [
 console.log(twoDimensionalProduct(arr2)); // 88
 
 */
+let multiply = function(arr){
+  let initialVal = 1;
+  let product =  arr.reduce((acc, val) => acc * val, initialVal);
+  return product;
+}
 
 let twoDimensionalProduct = function(arr) {
-    // Your code here
+  let initialVal = 1;
+  let product =  arr.reduce((acc, subArr) => acc * multiply(subArr), initialVal);
+  return product;
 };
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
